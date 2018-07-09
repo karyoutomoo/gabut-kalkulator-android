@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleCalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/logoCalc"
+        android:text="SIMPLE CALCULATOR"
+        android:textSize="35dp" />
+
+    <ImageView
+        android:id="@+id/logoCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/calculating"/>
+
+    <EditText
+        android:id="@+id/etAngka1"
+        android:layout_below="@+id/logoCalc"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Angka Pertama"
+        android:textSize="35sp"
+        />
+    <EditText
+        android:id="@+id/etAngka2"
+        android:layout_below="@+id/etAngka1"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Angka Kedua"
+        android:textSize="35sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/operation"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/etAngka2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:onClick="bagi"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:text=":" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:onClick="kali"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_toRightOf="@+id/btnSatu"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:text="x" />
+
+        <Button
+            android:id="@+id/btnSubtract"
+            android:onClick="kurang"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_toRightOf="@+id/btnDua"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:onClick="tambah"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:text="+" />
+
+        >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/operation"
+        android:text="0"
+        android:gravity="center"
+        android:textSize="100sp"
+        />
+</RelativeLayout>
