@@ -99,6 +99,13 @@
         android:layout_below="@id/operation"
         android:text="0"
         android:gravity="center"
-        android:textSize="100sp"
+        android:textSize="50sp"
         />
+    <Button
+        android:onClick="gotoPageTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="30sp"
+        android:text="About"/>
 </RelativeLayout>

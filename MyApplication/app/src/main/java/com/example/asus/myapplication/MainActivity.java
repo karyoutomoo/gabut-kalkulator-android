@@ -1,5 +1,6 @@
 package com.example.asus.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -63,5 +64,10 @@ public class MainActivity extends AppCompatActivity {
         else{
             Double hasil = Double.valueOf(angka1) / Double.valueOf(angka2);
             tvhasil.setText(String.valueOf(hasil));}
+        }
+        public void gotoPageTwo(View view)
+        {
+            Intent intent = new Intent(MainActivity.this, HalamanDua.class);
+            startActivity(intent);
         }
 }
